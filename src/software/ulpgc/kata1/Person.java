@@ -4,17 +4,19 @@ import java.time.LocalDate;
 
 public class Person {
 
-    private final String nombre;
+    private final String name;
 
+    private final String surname;
     private final LocalDate birthday;
 
-    public Person(String nombre, LocalDate birthday) {
-        this.nombre = nombre;
+    public Person(String nombre, String surname, LocalDate birthday) {
+        this.name = nombre;
+        this.surname = surname;
         this.birthday = birthday;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
     public LocalDate getBirthday() {
@@ -32,7 +34,8 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "nombre='" + nombre + '\'' +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
                 ", birthday=" + birthday +
                 '}';
     }
